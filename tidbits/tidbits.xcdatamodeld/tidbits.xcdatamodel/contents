@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Collection" representedClassName="Collection" syncable="YES" codeGenerationType="class">
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="newRelationship" inverseEntity="Tidbit"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="newRelationship1" inverseEntity="Tidbit"/>
+    </entity>
+    <entity name="Tidbit" representedClassName="Tidbit" syncable="YES" codeGenerationType="class">
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection" inverseName="newRelationship" inverseEntity="Collection"/>
+        <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="newRelationship" inverseEntity="Tag"/>
+    </entity>
+    <elements>
+        <element name="Tidbit" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Collection" positionX="-231.2578125" positionY="104.74609375" width="128" height="58"/>
+        <element name="Tag" positionX="116.453125" positionY="113.12109375" width="128" height="58"/>
+    </elements>
 </model>
