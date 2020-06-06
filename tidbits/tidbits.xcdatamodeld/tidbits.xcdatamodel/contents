@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Collection" representedClassName="Collection" syncable="YES" codeGenerationType="class">
-        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="newRelationship" inverseEntity="Tidbit"/>
+        <relationship name="classifiesMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag"/>
+        <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="memberOf" inverseEntity="Tidbit"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
-        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="newRelationship1" inverseEntity="Tidbit"/>
+        <relationship name="classifies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="classifiedBy" inverseEntity="Tidbit"/>
+        <relationship name="classifiesMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection"/>
     </entity>
     <entity name="Tidbit" representedClassName="Tidbit" syncable="YES" codeGenerationType="class">
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection" inverseName="newRelationship" inverseEntity="Collection"/>
-        <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="newRelationship" inverseEntity="Tag"/>
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastModified" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <relationship name="classifiedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="classifies" inverseEntity="Tag"/>
+        <relationship name="memberOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection" inverseName="contains" inverseEntity="Collection"/>
     </entity>
     <elements>
-        <element name="Tidbit" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="Collection" positionX="-231.2578125" positionY="104.74609375" width="128" height="58"/>
-        <element name="Tag" positionX="116.453125" positionY="113.12109375" width="128" height="58"/>
+        <element name="Collection" positionX="-231.2578125" positionY="104.74609375" width="128" height="73"/>
+        <element name="Tag" positionX="116.453125" positionY="113.12109375" width="128" height="73"/>
+        <element name="Tidbit" positionX="-63" positionY="-18" width="128" height="133"/>
     </elements>
 </model>

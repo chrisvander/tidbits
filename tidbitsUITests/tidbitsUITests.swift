@@ -3,7 +3,7 @@
 //  tidbitsUITests
 //
 //  Created by Chris Vanderloo on 6/5/20.
-//  Copyright © 2020 Chris Vanderloo. All rights reserved.
+//  Copyright © 2020 Chris Vanderloo and Michael Vanderloo. All rights reserved.
 //
 
 import XCTest
