@@ -16,6 +16,7 @@
 		83460783248B2491006EBD71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83460781248B2491006EBD71 /* LaunchScreen.storyboard */; };
 		8346078E248B2492006EBD71 /* tidbitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8346078D248B2492006EBD71 /* tidbitsTests.swift */; };
 		83460799248B2492006EBD71 /* tidbitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460798248B2492006EBD71 /* tidbitsUITests.swift */; };
+		83987CBD248C25D000BA9FFE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83987CBC248C25D000BA9FFE /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		83460794248B2492006EBD71 /* tidbitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tidbitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83460798248B2492006EBD71 /* tidbitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tidbitsUITests.swift; sourceTree = "<group>"; };
 		8346079A248B2492006EBD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83987CBC248C25D000BA9FFE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				83460773248B248F006EBD71 /* AppDelegate.swift */,
 				83460775248B248F006EBD71 /* SceneDelegate.swift */,
+				83987CBC248C25D000BA9FFE /* CardView.swift */,
 				8346077A248B248F006EBD71 /* ContentView.swift */,
 				8346077C248B2491006EBD71 /* Assets.xcassets */,
 				83460781248B2491006EBD71 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 				83460776248B248F006EBD71 /* SceneDelegate.swift in Sources */,
 				8346077B248B248F006EBD71 /* ContentView.swift in Sources */,
 				83460779248B248F006EBD71 /* tidbits.xcdatamodeld in Sources */,
+				83987CBD248C25D000BA9FFE /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

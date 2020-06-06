@@ -10,21 +10,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            ScrollView {
-                List {
-                    Text("Hello, World!")
+        NavigationView {
+            VStack {
+                ScrollView {
+                    VStack {
+                        CardView(a: 1)
+                    }
+                }
+                HStack {
+                    Spacer()
+                    Button(action: { }) {
+                        Circle()
+                    }
+                    .padding([.bottom, .trailing])
+                    .frame(width: 88, height: 88)
                 }
             }
-            HStack {
-                Spacer()
-                Button(action: { }) {
-                    Circle()
-                }
-                .padding([.bottom, .trailing])
-                .frame(width: 88, height: 88)
-            }
-                
         }
     }
 }
