@@ -14,7 +14,7 @@ struct RootView: View {
             VStack {
                 ScrollView {
                     VStack {
-                        CardView(a: 1)
+                        CardView()
                     }
                 }
                 HStack {

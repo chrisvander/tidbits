@@ -10,9 +10,6 @@ import Foundation
 import SwiftUI
 
 struct CardView: View {
-    var a: Int?
-    init() { }
-    init(a: Int) { self.a = a }
     var body: some View {
         Group {
             Text("Hello, World!")
