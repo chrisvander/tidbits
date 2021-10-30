@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Collection" representedClassName="Collection" syncable="YES" codeGenerationType="class">
-        <relationship name="classifiesMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag"/>
+        <relationship name="classifiesMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="classifiesMembers" inverseEntity="Tag"/>
         <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="memberOf" inverseEntity="Tidbit"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
         <relationship name="classifies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tidbit" inverseName="classifiedBy" inverseEntity="Tidbit"/>
-        <relationship name="classifiesMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection"/>
+        <relationship name="classifiesMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection" inverseName="classifiesMembers" inverseEntity="Collection"/>
     </entity>
     <entity name="Tidbit" representedClassName="Tidbit" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
